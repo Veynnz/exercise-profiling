@@ -32,7 +32,7 @@ public class StudentController {
         Optional<Student> studentWithHighestGpa = studentService.findStudentWithHighestGpa();
         return ResponseEntity.ok(studentWithHighestGpa.get().toString());
     }
-    @GetMapping("/all-student-name")
+        @GetMapping("/all-student-name")
     public ResponseEntity<String> allStudentName() {
         String joinedStudentNames = studentService.joinStudentNames();
         return ResponseEntity.ok(joinedStudentNames);
